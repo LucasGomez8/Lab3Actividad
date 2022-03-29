@@ -46,3 +46,15 @@ titulo varchar(40) not null unique,
 cantPaginas int not null check(cantPaginas>0),
 IDIdioma bigint null foreign key references IDIOMAS(IDIDIOMA),
 )
+
+alter table libros
+drop constraint FK__LIBROS__IDGENERO__44FF419A
+
+alter table libros
+drop column idgenero
+
+create table generos_x_libros(
+IDLIBRO BIGINT NOT NULL FOREIGN KEY REFERENCES LIBROS(ID),
+IDGENERO BIGINT NOT NULL FOREIGN KEY REFERENCES GENEROS(IDGENERO),
+PRIMARY KEY (IDLIBRO,IDGENERO)
+)
