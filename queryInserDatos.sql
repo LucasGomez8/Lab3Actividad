@@ -1,15 +1,19 @@
-insert into Editoriales(nombre)
-values ('alfaguara'),('amazonia editorial'),('anfora'),('acantilado')
+use actividad
 
-insert into Editoriales(nombre)
-values('avon'),('createspace'),('crown publishers'),('delbolsillo'),('del nuevo extremo'),('dolmen'),('doubleday books'),('ediciones b'),('ediciones nace'),('editorial sudamericana'),('el ateneo'),('feedbooks'),('grijalbos'),('harper'),('harper paperbacks'),('harper collins'),('indiana university'),('john wiley & sons'),('mestas ediciones'),('nal'),('planeta'),('plaza & janes'),('pomaire'),('raincoast books'),('rba'),('scribner'),('sergio adrian martin'),('severed press'),('signet classics'),('sudamericana'),('the university of chicago'),('umbriel'),('university press of mississipi'),('vergara editorial'),('wiley-blackwell')
+insert into EDITORIALES(NOMBRE)
+values ('Acantilado'),('Alfaguara'),('Aamazonia Editorial'),('Anfora'),('Avon'),('Createspace'),('Crown Publisher'),('Delbolsillo'),('del Nuevo Extremo') 
 
+insert into IDIOMAS(NOMBRE)
+values ('Español'),('Ingles'),('Frances')
 
-insert into autores(Nombre, Apellido)
-values ('Arslanian','Tamar'),('Bachman','Richard'),('Balmaceda','Daniel'),('Bourdain','Antony'),('Bulat','Tomas'),('Carroll','Lewis'),('Cline','Ernest'),('Cohat','Yves'),('Coma','Oriol Comas i'),('Eisenhart','Margaret'),('Finkel','Elizabeth'),('King','Stephen'),('Larsonn','S. J.'),('McClure','Shaun'),('Mechner','Jordan'),('Orwell','George'),('Perez Rodriguez','Uxio'),('Saint-Exupery','Antoine de'),('Schereier','Jason'),('Silberchatz','Abraham'),('Sole','Alessandro Del'),('Stevenson','Robert Louis'),('Toussaint-Samat','Maguelonne'),('Verdon','Jean'),('Verne','Jules'),('Walford','Robert'),('Wilde','Oscar'),('Zonderman','Jon'),('Zweig','Stefan')
+insert into PAIS(NOMBRE)
+values ('Alemania'),('Argentina'),('Austria'),('Escocia'),('España'),('Estados Unidos'),('Francia'),('India'),('Inglaterra'),('Italia'),('Suecia')
 
-insert into IDIOMAS(Idioma)
-values('Español'),('Ingles')
+insert into AUTORES(APELLIDO,NOMBRE,FNACIMIENTO,GENDER,IDPAIS)
+VALUES ('Arlsanian','Tamar','1846-10-28','f','6'),('Bachman','Richard','1991-06-04','M','6'),('Balmaceda','Daniel','1847-05-23','m','2'),('Bourdain','Anthony','1874-05-02','M','7'),('Bulat','Tomas','1980-08-10','M','2'),('Crichton','Michael','1870-03-27','m','6'),('King','Stephen','1930-04-07','m','6'),('Schreier','Jason','1957-10-27','m','1'),('Walford','Robert','1903-02-27','m','9')
 
-insert into generos(CATEGORIA)
-values ('Ciencia Ficcion'),('Suspenso'),('Nanopunk'),('Thriller'),('Terror'),('')
+insert into GENEROS(NOM_GENERO)
+values ('Ciencia Ficcion'),('Thriller'),('Suspenso'),('Terror'),('Horror'),('Romance'),('Drama'),('Accion'),('Aventura'),('Fantasia')
+
+insert into LIBROS(TITULO,IDIDIOMA,CANTPAGINAS,ANIO,IDEDITORIAL)
+values ('Prey','1','507','2002','1'),('El Umbral de la Noche','1','424','1978','10')
